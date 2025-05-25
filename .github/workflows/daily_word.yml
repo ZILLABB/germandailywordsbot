@@ -1,0 +1,63 @@
+name: Daily German Word
+
+on:
+  schedule:
+    # Run daily at 9:00 AM UTC (adjust timezone as needed)
+    - cron: '0 9 * * *'
+  
+  # Allow manual triggering
+  workflow_dispatch:
+    inputs:
+      words_per_day:
+        description: 'Number of words to send (3-5)'
+        required: false
+        default: '3'
+        type: choice
+        options:
+        - '3'
+        - '4'
+        - '5'
+
+jobs:
+  send-daily-words:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    
+    - name: Cache pip dependencies
+      uses: actions/cache@v3
+      with:
+        path: ~/.cache/pip
+        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+        restore-keys: |
+          ${{ runner.os }}-pip-
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+    
+    - name: Send daily German words
+      env:
+        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        CHAT_ID: ${{ secrets.CHAT_ID }}
+        WORDS_PER_DAY: ${{ github.event.inputs.words_per_day || '3' }}
+      run: |
+        echo "Sending daily German lesson..."
+        echo "Words per day: $WORDS_PER_DAY"
+        python send_word.py
+    
+    - name: Upload logs (if any)
+      uses: actions/upload-artifact@v3
+      if: always()
+      with:
+        name: bot-logs
+        path: bot.log
+        retention-days: 7

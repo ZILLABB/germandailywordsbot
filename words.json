@@ -1,0 +1,994 @@
+[
+  {
+    "german": "Hallo",
+    "english": "Hello",
+    "pronunciation": "/ˈhaloː/",
+    "example": "Hallo, wie geht es dir?",
+    "example_translation": "Hello, how are you?",
+    "category": "greetings"
+  },
+  {
+    "german": "Guten Morgen",
+    "english": "Good morning",
+    "pronunciation": "/ˈɡuːtən ˈmɔʁɡən/",
+    "example": "Guten Morgen! Haben Sie gut geschlafen?",
+    "example_translation": "Good morning! Did you sleep well?",
+    "category": "greetings"
+  },
+  {
+    "german": "Guten Tag",
+    "english": "Good day/afternoon",
+    "pronunciation": "/ˈɡuːtən taːk/",
+    "example": "Guten Tag, kann ich Ihnen helfen?",
+    "example_translation": "Good day, can I help you?",
+    "category": "greetings"
+  },
+  {
+    "german": "Guten Abend",
+    "english": "Good evening",
+    "pronunciation": "/ˈɡuːtən ˈaːbənt/",
+    "example": "Guten Abend, schön Sie zu sehen!",
+    "example_translation": "Good evening, nice to see you!",
+    "category": "greetings"
+  },
+  {
+    "german": "Gute Nacht",
+    "english": "Good night",
+    "pronunciation": "/ˈɡuːtə naxt/",
+    "example": "Gute Nacht und süße Träume!",
+    "example_translation": "Good night and sweet dreams!",
+    "category": "greetings"
+  },
+  {
+    "german": "Auf Wiedersehen",
+    "english": "Goodbye",
+    "pronunciation": "/aʊf ˈviːdɐˌzeːən/",
+    "example": "Auf Wiedersehen, bis morgen!",
+    "example_translation": "Goodbye, see you tomorrow!",
+    "category": "greetings"
+  },
+  {
+    "german": "Tschüss",
+    "english": "Bye (informal)",
+    "pronunciation": "/tʃyːs/",
+    "example": "Tschüss, wir sehen uns später!",
+    "example_translation": "Bye, we'll see each other later!",
+    "category": "greetings"
+  },
+  {
+    "german": "Danke",
+    "english": "Thank you",
+    "pronunciation": "/ˈdaŋkə/",
+    "example": "Danke für deine Hilfe!",
+    "example_translation": "Thank you for your help!",
+    "category": "politeness"
+  },
+  {
+    "german": "Bitte",
+    "english": "Please/You're welcome",
+    "pronunciation": "/ˈbɪtə/",
+    "example": "Bitte schön, gern geschehen!",
+    "example_translation": "You're welcome, my pleasure!",
+    "category": "politeness"
+  },
+  {
+    "german": "Entschuldigung",
+    "english": "Excuse me/Sorry",
+    "pronunciation": "/ɛntˈʃʊldɪɡʊŋ/",
+    "example": "Entschuldigung, wo ist der Bahnhof?",
+    "example_translation": "Excuse me, where is the train station?",
+    "category": "politeness"
+  },
+  {
+    "german": "Es tut mir leid",
+    "english": "I'm sorry",
+    "pronunciation": "/ɛs tuːt miːɐ̯ laɪt/",
+    "example": "Es tut mir leid, das war mein Fehler.",
+    "example_translation": "I'm sorry, that was my mistake.",
+    "category": "politeness"
+  },
+  {
+    "german": "Ja",
+    "english": "Yes",
+    "pronunciation": "/jaː/",
+    "example": "Ja, das ist eine gute Idee.",
+    "example_translation": "Yes, that's a good idea.",
+    "category": "basic"
+  },
+  {
+    "german": "Nein",
+    "english": "No",
+    "pronunciation": "/naɪn/",
+    "example": "Nein, das möchte ich nicht.",
+    "example_translation": "No, I don't want that.",
+    "category": "basic"
+  },
+  {
+    "german": "Vielleicht",
+    "english": "Maybe",
+    "pronunciation": "/fiˈlaɪçt/",
+    "example": "Vielleicht gehen wir ins Kino.",
+    "example_translation": "Maybe we'll go to the cinema.",
+    "category": "basic"
+  },
+  {
+    "german": "Ich",
+    "english": "I",
+    "pronunciation": "/ɪç/",
+    "example": "Ich bin müde.",
+    "example_translation": "I am tired.",
+    "category": "pronouns"
+  },
+  {
+    "german": "Du",
+    "english": "You (informal)",
+    "pronunciation": "/duː/",
+    "example": "Du bist sehr nett.",
+    "example_translation": "You are very nice.",
+    "category": "pronouns"
+  },
+  {
+    "german": "Sie",
+    "english": "You (formal)/They",
+    "pronunciation": "/ziː/",
+    "example": "Sie sprechen sehr gut Deutsch.",
+    "example_translation": "You speak German very well.",
+    "category": "pronouns"
+  },
+  {
+    "german": "Er",
+    "english": "He",
+    "pronunciation": "/eːɐ̯/",
+    "example": "Er ist mein Bruder.",
+    "example_translation": "He is my brother.",
+    "category": "pronouns"
+  },
+  {
+    "german": "Sie",
+    "english": "She",
+    "pronunciation": "/ziː/",
+    "example": "Sie ist sehr klug.",
+    "example_translation": "She is very smart.",
+    "category": "pronouns"
+  },
+  {
+    "german": "Wir",
+    "english": "We",
+    "pronunciation": "/viːɐ̯/",
+    "example": "Wir gehen zusammen einkaufen.",
+    "example_translation": "We're going shopping together.",
+    "category": "pronouns"
+  },
+  {
+    "german": "Eins",
+    "english": "One",
+    "pronunciation": "/aɪns/",
+    "example": "Ich hätte gern eins davon.",
+    "example_translation": "I would like one of those.",
+    "category": "numbers"
+  },
+  {
+    "german": "Zwei",
+    "english": "Two",
+    "pronunciation": "/tsvaɪ/",
+    "example": "Ich habe zwei Katzen.",
+    "example_translation": "I have two cats.",
+    "category": "numbers"
+  },
+  {
+    "german": "Drei",
+    "english": "Three",
+    "pronunciation": "/draɪ/",
+    "example": "Das Buch hat drei Kapitel.",
+    "example_translation": "The book has three chapters.",
+    "category": "numbers"
+  },
+  {
+    "german": "Vier",
+    "english": "Four",
+    "pronunciation": "/fiːɐ̯/",
+    "example": "Wir sind vier Personen.",
+    "example_translation": "We are four people.",
+    "category": "numbers"
+  },
+  {
+    "german": "Fünf",
+    "english": "Five",
+    "pronunciation": "/fʏnf/",
+    "example": "Der Bus kommt in fünf Minuten.",
+    "example_translation": "The bus comes in five minutes.",
+    "category": "numbers"
+  },
+  {
+    "german": "Sechs",
+    "english": "Six",
+    "pronunciation": "/zɛks/",
+    "example": "Das Kind ist sechs Jahre alt.",
+    "example_translation": "The child is six years old.",
+    "category": "numbers"
+  },
+  {
+    "german": "Sieben",
+    "english": "Seven",
+    "pronunciation": "/ˈziːbən/",
+    "example": "Die Woche hat sieben Tage.",
+    "example_translation": "The week has seven days.",
+    "category": "numbers"
+  },
+  {
+    "german": "Acht",
+    "english": "Eight",
+    "pronunciation": "/axt/",
+    "example": "Ich stehe um acht Uhr auf.",
+    "example_translation": "I get up at eight o'clock.",
+    "category": "numbers"
+  },
+  {
+    "german": "Neun",
+    "english": "Nine",
+    "pronunciation": "/nɔɪn/",
+    "example": "Das Spiel dauert neun Runden.",
+    "example_translation": "The game lasts nine rounds.",
+    "category": "numbers"
+  },
+  {
+    "german": "Zehn",
+    "english": "Ten",
+    "pronunciation": "/tseːn/",
+    "example": "Ich zähle bis zehn.",
+    "example_translation": "I count to ten.",
+    "category": "numbers"
+  },
+  {
+    "german": "Wasser",
+    "english": "Water",
+    "pronunciation": "/ˈvasɐ/",
+    "example": "Ich trinke gerne Wasser.",
+    "example_translation": "I like to drink water.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Brot",
+    "english": "Bread",
+    "pronunciation": "/broːt/",
+    "example": "Das Brot ist sehr lecker.",
+    "example_translation": "The bread is very delicious.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Kaffee",
+    "english": "Coffee",
+    "pronunciation": "/ˈkafe/",
+    "example": "Ich trinke jeden Morgen Kaffee.",
+    "example_translation": "I drink coffee every morning.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Tee",
+    "english": "Tea",
+    "pronunciation": "/teː/",
+    "example": "Möchten Sie Tee oder Kaffee?",
+    "example_translation": "Would you like tea or coffee?",
+    "category": "food_drink"
+  },
+  {
+    "german": "Milch",
+    "english": "Milk",
+    "pronunciation": "/mɪlç/",
+    "example": "Die Milch ist frisch.",
+    "example_translation": "The milk is fresh.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Käse",
+    "english": "Cheese",
+    "pronunciation": "/ˈkɛːzə/",
+    "example": "Dieser Käse schmeckt sehr gut.",
+    "example_translation": "This cheese tastes very good.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Fleisch",
+    "english": "Meat",
+    "pronunciation": "/flaɪʃ/",
+    "example": "Ich esse kein Fleisch.",
+    "example_translation": "I don't eat meat.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Fisch",
+    "english": "Fish",
+    "pronunciation": "/fɪʃ/",
+    "example": "Der Fisch ist sehr frisch.",
+    "example_translation": "The fish is very fresh.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Obst",
+    "english": "Fruit",
+    "pronunciation": "/oːpst/",
+    "example": "Obst ist gesund.",
+    "example_translation": "Fruit is healthy.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Gemüse",
+    "english": "Vegetables",
+    "pronunciation": "/ɡəˈmyːzə/",
+    "example": "Ich esse gern Gemüse.",
+    "example_translation": "I like to eat vegetables.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Apfel",
+    "english": "Apple",
+    "pronunciation": "/ˈapfəl/",
+    "example": "Der Apfel ist rot und süß.",
+    "example_translation": "The apple is red and sweet.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Banane",
+    "english": "Banana",
+    "pronunciation": "/baˈnaːnə/",
+    "example": "Die Banane ist gelb.",
+    "example_translation": "The banana is yellow.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Orange",
+    "english": "Orange",
+    "pronunciation": "/oˈʁaːnʒə/",
+    "example": "Die Orange ist saftig.",
+    "example_translation": "The orange is juicy.",
+    "category": "food_drink"
+  },
+  {
+    "german": "Haus",
+    "english": "House",
+    "pronunciation": "/haʊs/",
+    "example": "Mein Haus ist groß.",
+    "example_translation": "My house is big.",
+    "category": "home"
+  },
+  {
+    "german": "Wohnung",
+    "english": "Apartment",
+    "pronunciation": "/ˈvoːnʊŋ/",
+    "example": "Die Wohnung hat drei Zimmer.",
+    "example_translation": "The apartment has three rooms.",
+    "category": "home"
+  },
+  {
+    "german": "Zimmer",
+    "english": "Room",
+    "pronunciation": "/ˈtsɪmɐ/",
+    "example": "Das Zimmer ist sehr hell.",
+    "example_translation": "The room is very bright.",
+    "category": "home"
+  },
+  {
+    "german": "Küche",
+    "english": "Kitchen",
+    "pronunciation": "/ˈkʏçə/",
+    "example": "Ich koche gern in der Küche.",
+    "example_translation": "I like to cook in the kitchen.",
+    "category": "home"
+  },
+  {
+    "german": "Badezimmer",
+    "english": "Bathroom",
+    "pronunciation": "/ˈbaːdəˌtsɪmɐ/",
+    "example": "Das Badezimmer ist sauber.",
+    "example_translation": "The bathroom is clean.",
+    "category": "home"
+  },
+  {
+    "german": "Schlafzimmer",
+    "english": "Bedroom",
+    "pronunciation": "/ˈʃlaːfˌtsɪmɐ/",
+    "example": "Mein Schlafzimmer ist gemütlich.",
+    "example_translation": "My bedroom is cozy.",
+    "category": "home"
+  },
+  {
+    "german": "Wohnzimmer",
+    "english": "Living room",
+    "pronunciation": "/ˈvoːnˌtsɪmɐ/",
+    "example": "Wir sitzen im Wohnzimmer.",
+    "example_translation": "We're sitting in the living room.",
+    "category": "home"
+  },
+  {
+    "german": "Garten",
+    "english": "Garden",
+    "pronunciation": "/ˈɡaʁtən/",
+    "example": "Der Garten ist voller Blumen.",
+    "example_translation": "The garden is full of flowers.",
+    "category": "home"
+  },
+  {
+    "german": "Auto",
+    "english": "Car",
+    "pronunciation": "/ˈaʊto/",
+    "example": "Das Auto ist rot.",
+    "example_translation": "The car is red.",
+    "category": "transport"
+  },
+  {
+    "german": "Zug",
+    "english": "Train",
+    "pronunciation": "/tsuːk/",
+    "example": "Der Zug fährt um acht Uhr ab.",
+    "example_translation": "The train departs at eight o'clock.",
+    "category": "transport"
+  },
+  {
+    "german": "Bus",
+    "english": "Bus",
+    "pronunciation": "/bʊs/",
+    "example": "Der Bus kommt in fünf Minuten.",
+    "example_translation": "The bus comes in five minutes.",
+    "category": "transport"
+  },
+  {
+    "german": "Flugzeug",
+    "english": "Airplane",
+    "pronunciation": "/ˈfluːkˌtsɔɪk/",
+    "example": "Das Flugzeug fliegt sehr hoch.",
+    "example_translation": "The airplane flies very high.",
+    "category": "transport"
+  },
+  {
+    "german": "Fahrrad",
+    "english": "Bicycle",
+    "pronunciation": "/ˈfaːɐ̯ˌʁaːt/",
+    "example": "Ich fahre gern Fahrrad.",
+    "example_translation": "I like to ride a bicycle.",
+    "category": "transport"
+  },
+  {
+    "german": "Rot",
+    "english": "Red",
+    "pronunciation": "/roːt/",
+    "example": "Die Rose ist rot.",
+    "example_translation": "The rose is red.",
+    "category": "colors"
+  },
+  {
+    "german": "Blau",
+    "english": "Blue",
+    "pronunciation": "/blaʊ/",
+    "example": "Der Himmel ist blau.",
+    "example_translation": "The sky is blue.",
+    "category": "colors"
+  },
+  {
+    "german": "Grün",
+    "english": "Green",
+    "pronunciation": "/ɡʁyːn/",
+    "example": "Das Gras ist grün.",
+    "example_translation": "The grass is green.",
+    "category": "colors"
+  },
+  {
+    "german": "Gelb",
+    "english": "Yellow",
+    "pronunciation": "/ɡɛlp/",
+    "example": "Die Sonne ist gelb.",
+    "example_translation": "The sun is yellow.",
+    "category": "colors"
+  },
+  {
+    "german": "Schwarz",
+    "english": "Black",
+    "pronunciation": "/ʃvaʁts/",
+    "example": "Die Katze ist schwarz.",
+    "example_translation": "The cat is black.",
+    "category": "colors"
+  },
+  {
+    "german": "Weiß",
+    "english": "White",
+    "pronunciation": "/vaɪs/",
+    "example": "Der Schnee ist weiß.",
+    "example_translation": "The snow is white.",
+    "category": "colors"
+  },
+  {
+    "german": "Mutter",
+    "english": "Mother",
+    "pronunciation": "/ˈmʊtɐ/",
+    "example": "Meine Mutter kocht sehr gut.",
+    "example_translation": "My mother cooks very well.",
+    "category": "family"
+  },
+  {
+    "german": "Vater",
+    "english": "Father",
+    "pronunciation": "/ˈfaːtɐ/",
+    "example": "Mein Vater arbeitet im Büro.",
+    "example_translation": "My father works in the office.",
+    "category": "family"
+  },
+  {
+    "german": "Bruder",
+    "english": "Brother",
+    "pronunciation": "/ˈbʁuːdɐ/",
+    "example": "Mein Bruder spielt Fußball.",
+    "example_translation": "My brother plays soccer.",
+    "category": "family"
+  },
+  {
+    "german": "Schwester",
+    "english": "Sister",
+    "pronunciation": "/ˈʃvɛstɐ/",
+    "example": "Meine Schwester studiert Medizin.",
+    "example_translation": "My sister studies medicine.",
+    "category": "family"
+  },
+  {
+    "german": "Kind",
+    "english": "Child",
+    "pronunciation": "/kɪnt/",
+    "example": "Das Kind spielt im Garten.",
+    "example_translation": "The child plays in the garden.",
+    "category": "family"
+  },
+  {
+    "german": "Großmutter",
+    "english": "Grandmother",
+    "pronunciation": "/ˈɡʁoːsˌmʊtɐ/",
+    "example": "Meine Großmutter ist sehr weise.",
+    "example_translation": "My grandmother is very wise.",
+    "category": "family"
+  },
+  {
+    "german": "Großvater",
+    "english": "Grandfather",
+    "pronunciation": "/ˈɡʁoːsˌfaːtɐ/",
+    "example": "Mein Großvater erzählt gute Geschichten.",
+    "example_translation": "My grandfather tells good stories.",
+    "category": "family"
+  },
+  {
+    "german": "Heute",
+    "english": "Today",
+    "pronunciation": "/ˈhɔɪtə/",
+    "example": "Heute ist ein schöner Tag.",
+    "example_translation": "Today is a beautiful day.",
+    "category": "time"
+  },
+  {
+    "german": "Morgen",
+    "english": "Tomorrow",
+    "pronunciation": "/ˈmɔʁɡən/",
+    "example": "Morgen gehen wir ins Museum.",
+    "example_translation": "Tomorrow we're going to the museum.",
+    "category": "time"
+  },
+  {
+    "german": "Gestern",
+    "english": "Yesterday",
+    "pronunciation": "/ˈɡɛstɐn/",
+    "example": "Gestern war das Wetter schlecht.",
+    "example_translation": "Yesterday the weather was bad.",
+    "category": "time"
+  },
+  {
+    "german": "Woche",
+    "english": "Week",
+    "pronunciation": "/ˈvɔxə/",
+    "example": "Diese Woche arbeite ich viel.",
+    "example_translation": "This week I work a lot.",
+    "category": "time"
+  },
+  {
+    "german": "Monat",
+    "english": "Month",
+    "pronunciation": "/ˈmoːnat/",
+    "example": "Nächsten Monat fahre ich in Urlaub.",
+    "example_translation": "Next month I'm going on vacation.",
+    "category": "time"
+  },
+  {
+    "german": "Jahr",
+    "english": "Year",
+    "pronunciation": "/jaːɐ̯/",
+    "example": "Dieses Jahr lerne ich Deutsch.",
+    "example_translation": "This year I'm learning German.",
+    "category": "time"
+  },
+  {
+    "german": "Sonne",
+    "english": "Sun",
+    "pronunciation": "/ˈzɔnə/",
+    "example": "Die Sonne scheint heute hell.",
+    "example_translation": "The sun is shining brightly today.",
+    "category": "weather"
+  },
+  {
+    "german": "Regen",
+    "english": "Rain",
+    "pronunciation": "/ˈʁeːɡən/",
+    "example": "Es gibt heute viel Regen.",
+    "example_translation": "There's a lot of rain today.",
+    "category": "weather"
+  },
+  {
+    "german": "Schnee",
+    "english": "Snow",
+    "pronunciation": "/ʃneː/",
+    "example": "Der Schnee ist sehr weiß.",
+    "example_translation": "The snow is very white.",
+    "category": "weather"
+  },
+  {
+    "german": "Wind",
+    "english": "Wind",
+    "pronunciation": "/vɪnt/",
+    "example": "Der Wind ist heute stark.",
+    "example_translation": "The wind is strong today.",
+    "category": "weather"
+  },
+  {
+    "german": "Wolke",
+    "english": "Cloud",
+    "pronunciation": "/ˈvɔlkə/",
+    "example": "Am Himmel sind viele Wolken.",
+    "example_translation": "There are many clouds in the sky.",
+    "category": "weather"
+  },
+  {
+    "german": "Warm",
+    "english": "Warm",
+    "pronunciation": "/vaʁm/",
+    "example": "Das Wetter ist heute warm.",
+    "example_translation": "The weather is warm today.",
+    "category": "weather"
+  },
+  {
+    "german": "Kalt",
+    "english": "Cold",
+    "pronunciation": "/kalt/",
+    "example": "Im Winter ist es sehr kalt.",
+    "example_translation": "In winter it's very cold.",
+    "category": "weather"
+  },
+  {
+    "german": "Heiß",
+    "english": "Hot",
+    "pronunciation": "/haɪs/",
+    "example": "Im Sommer ist es oft heiß.",
+    "example_translation": "In summer it's often hot.",
+    "category": "weather"
+  },
+  {
+    "german": "Schön",
+    "english": "Beautiful/Nice",
+    "pronunciation": "/ʃøːn/",
+    "example": "Das ist ein schönes Bild.",
+    "example_translation": "That's a beautiful picture.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Groß",
+    "english": "Big/Large",
+    "pronunciation": "/ɡʁoːs/",
+    "example": "Das Haus ist sehr groß.",
+    "example_translation": "The house is very big.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Klein",
+    "english": "Small",
+    "pronunciation": "/klaɪn/",
+    "example": "Die Katze ist klein.",
+    "example_translation": "The cat is small.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Gut",
+    "english": "Good",
+    "pronunciation": "/ɡuːt/",
+    "example": "Das Essen ist sehr gut.",
+    "example_translation": "The food is very good.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Schlecht",
+    "english": "Bad",
+    "pronunciation": "/ʃlɛçt/",
+    "example": "Das Wetter ist heute schlecht.",
+    "example_translation": "The weather is bad today.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Neu",
+    "english": "New",
+    "pronunciation": "/nɔɪ/",
+    "example": "Ich habe ein neues Auto.",
+    "example_translation": "I have a new car.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Alt",
+    "english": "Old",
+    "pronunciation": "/alt/",
+    "example": "Das Buch ist sehr alt.",
+    "example_translation": "The book is very old.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Schnell",
+    "english": "Fast",
+    "pronunciation": "/ʃnɛl/",
+    "example": "Das Auto fährt sehr schnell.",
+    "example_translation": "The car drives very fast.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Langsam",
+    "english": "Slow",
+    "pronunciation": "/ˈlaŋzaːm/",
+    "example": "Die Schildkröte ist langsam.",
+    "example_translation": "The turtle is slow.",
+    "category": "adjectives"
+  },
+  {
+    "german": "Arbeiten",
+    "english": "To work",
+    "pronunciation": "/ˈaʁbaɪtən/",
+    "example": "Ich arbeite im Büro.",
+    "example_translation": "I work in the office.",
+    "category": "verbs"
+  },
+  {
+    "german": "Gehen",
+    "english": "To go",
+    "pronunciation": "/ˈɡeːən/",
+    "example": "Wir gehen ins Kino.",
+    "example_translation": "We're going to the cinema.",
+    "category": "verbs"
+  },
+  {
+    "german": "Kommen",
+    "english": "To come",
+    "pronunciation": "/ˈkɔmən/",
+    "example": "Kommst du heute Abend?",
+    "example_translation": "Are you coming tonight?",
+    "category": "verbs"
+  },
+  {
+    "german": "Sehen",
+    "english": "To see",
+    "pronunciation": "/ˈzeːən/",
+    "example": "Ich sehe einen Vogel.",
+    "example_translation": "I see a bird.",
+    "category": "verbs"
+  },
+  {
+    "german": "Hören",
+    "english": "To hear",
+    "pronunciation": "/ˈhøːʁən/",
+    "example": "Ich höre Musik.",
+    "example_translation": "I hear music.",
+    "category": "verbs"
+  },
+  {
+    "german": "Sprechen",
+    "english": "To speak",
+    "pronunciation": "/ˈʃpʁɛçən/",
+    "example": "Sie spricht drei Sprachen.",
+    "example_translation": "She speaks three languages.",
+    "category": "verbs"
+  },
+  {
+    "german": "Essen",
+    "english": "To eat",
+    "pronunciation": "/ˈɛsən/",
+    "example": "Wir essen zu Mittag.",
+    "example_translation": "We're eating lunch.",
+    "category": "verbs"
+  },
+  {
+    "german": "Trinken",
+    "english": "To drink",
+    "pronunciation": "/ˈtʁɪŋkən/",
+    "example": "Ich trinke Wasser.",
+    "example_translation": "I drink water.",
+    "category": "verbs"
+  },
+  {
+    "german": "Schlafen",
+    "english": "To sleep",
+    "pronunciation": "/ˈʃlaːfən/",
+    "example": "Das Baby schläft.",
+    "example_translation": "The baby is sleeping.",
+    "category": "verbs"
+  },
+  {
+    "german": "Lesen",
+    "english": "To read",
+    "pronunciation": "/ˈleːzən/",
+    "example": "Ich lese ein Buch.",
+    "example_translation": "I'm reading a book.",
+    "category": "verbs"
+  },
+  {
+    "german": "Schreiben",
+    "english": "To write",
+    "pronunciation": "/ˈʃʁaɪbən/",
+    "example": "Sie schreibt einen Brief.",
+    "example_translation": "She's writing a letter.",
+    "category": "verbs"
+  },
+  {
+    "german": "Lernen",
+    "english": "To learn",
+    "pronunciation": "/ˈlɛʁnən/",
+    "example": "Ich lerne Deutsch.",
+    "example_translation": "I'm learning German.",
+    "category": "verbs"
+  },
+  {
+    "german": "Verstehen",
+    "english": "To understand",
+    "pronunciation": "/fɛʁˈʃteːən/",
+    "example": "Verstehen Sie mich?",
+    "example_translation": "Do you understand me?",
+    "category": "verbs"
+  },
+  {
+    "german": "Kaufen",
+    "english": "To buy",
+    "pronunciation": "/ˈkaʊfən/",
+    "example": "Ich kaufe Brot im Laden.",
+    "example_translation": "I buy bread at the store.",
+    "category": "verbs"
+  },
+  {
+    "german": "Verkaufen",
+    "english": "To sell",
+    "pronunciation": "/fɛʁˈkaʊfən/",
+    "example": "Er verkauft sein Auto.",
+    "example_translation": "He's selling his car.",
+    "category": "verbs"
+  },
+  {
+    "german": "Hund",
+    "english": "Dog",
+    "pronunciation": "/hʊnt/",
+    "example": "Der Hund ist sehr freundlich.",
+    "example_translation": "The dog is very friendly.",
+    "category": "animals"
+  },
+  {
+    "german": "Katze",
+    "english": "Cat",
+    "pronunciation": "/ˈkatsə/",
+    "example": "Die Katze schläft auf dem Sofa.",
+    "example_translation": "The cat sleeps on the sofa.",
+    "category": "animals"
+  },
+  {
+    "german": "Vogel",
+    "english": "Bird",
+    "pronunciation": "/ˈfoːɡəl/",
+    "example": "Der Vogel singt schön.",
+    "example_translation": "The bird sings beautifully.",
+    "category": "animals"
+  },
+  {
+    "german": "Pferd",
+    "english": "Horse",
+    "pronunciation": "/pfeːɐ̯t/",
+    "example": "Das Pferd läuft schnell.",
+    "example_translation": "The horse runs fast.",
+    "category": "animals"
+  },
+  {
+    "german": "Kuh",
+    "english": "Cow",
+    "pronunciation": "/kuː/",
+    "example": "Die Kuh gibt Milch.",
+    "example_translation": "The cow gives milk.",
+    "category": "animals"
+  },
+  {
+    "german": "Schwein",
+    "english": "Pig",
+    "pronunciation": "/ʃvaɪn/",
+    "example": "Das Schwein ist rosa.",
+    "example_translation": "The pig is pink.",
+    "category": "animals"
+  },
+  {
+    "german": "Schaf",
+    "english": "Sheep",
+    "pronunciation": "/ʃaːf/",
+    "example": "Das Schaf hat weiße Wolle.",
+    "example_translation": "The sheep has white wool.",
+    "category": "animals"
+  },
+  {
+    "german": "Buch",
+    "english": "Book",
+    "pronunciation": "/buːx/",
+    "example": "Das Buch ist sehr interessant.",
+    "example_translation": "The book is very interesting.",
+    "category": "objects"
+  },
+  {
+    "german": "Tisch",
+    "english": "Table",
+    "pronunciation": "/tɪʃ/",
+    "example": "Das Essen steht auf dem Tisch.",
+    "example_translation": "The food is on the table.",
+    "category": "objects"
+  },
+  {
+    "german": "Stuhl",
+    "english": "Chair",
+    "pronunciation": "/ʃtuːl/",
+    "example": "Der Stuhl ist bequem.",
+    "example_translation": "The chair is comfortable.",
+    "category": "objects"
+  },
+  {
+    "german": "Bett",
+    "english": "Bed",
+    "pronunciation": "/bɛt/",
+    "example": "Das Bett ist sehr weich.",
+    "example_translation": "The bed is very soft.",
+    "category": "objects"
+  },
+  {
+    "german": "Fenster",
+    "english": "Window",
+    "pronunciation": "/ˈfɛnstɐ/",
+    "example": "Das Fenster ist offen.",
+    "example_translation": "The window is open.",
+    "category": "objects"
+  },
+  {
+    "german": "Tür",
+    "english": "Door",
+    "pronunciation": "/tyːɐ̯/",
+    "example": "Die Tür ist geschlossen.",
+    "example_translation": "The door is closed.",
+    "category": "objects"
+  },
+  {
+    "german": "Telefon",
+    "english": "Telephone",
+    "pronunciation": "/teləˈfoːn/",
+    "example": "Das Telefon klingelt.",
+    "example_translation": "The telephone is ringing.",
+    "category": "objects"
+  },
+  {
+    "german": "Computer",
+    "english": "Computer",
+    "pronunciation": "/kɔmˈpjuːtɐ/",
+    "example": "Ich arbeite am Computer.",
+    "example_translation": "I work on the computer.",
+    "category": "objects"
+  },
+  {
+    "german": "Handy",
+    "english": "Mobile phone",
+    "pronunciation": "/ˈhɛndi/",
+    "example": "Mein Handy ist kaputt.",
+    "example_translation": "My mobile phone is broken.",
+    "category": "objects"
+  },
+  {
+    "german": "Uhr",
+    "english": "Clock/Watch",
+    "pronunciation": "/uːɐ̯/",
+    "example": "Die Uhr zeigt drei Uhr.",
+    "example_translation": "The clock shows three o'clock.",
+    "category": "objects"
+  }
+]
