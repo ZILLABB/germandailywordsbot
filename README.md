@@ -1,19 +1,64 @@
-# 🇩🇪 German Daily Word Bot
+# 🇩🇪 German Daily Word Bot - Enhanced Learning System
 
-A Telegram bot that sends daily German vocabulary lessons with pronunciation guides, examples, and translations. Perfect for consistent German language learning!
+A comprehensive Telegram bot that provides personalized German language learning with CEFR level progression, spaced repetition, and interactive features. Transform your German vocabulary learning journey!
 
-## ✨ Features
+## ✨ Enhanced Features
 
-- **Daily Vocabulary**: Sends 3-5 German words every day at 9:00 AM UTC
-- **Comprehensive Learning**: Each word includes:
-  - German word with proper IPA pronunciation
-  - English translation
-  - Usage example in German
-  - English translation of the example
-  - Word category (greetings, food, family, etc.)
-- **Consistent Delivery**: Uses deterministic selection based on date
-- **Rich Vocabulary Database**: 100+ carefully curated German words
-- **Automated via GitHub Actions**: No server maintenance required
+### 🎯 **Progressive Difficulty System (CEFR Levels)**
+
+- **Adaptive Learning**: Starts with A1 (beginner) and progresses to B2 (upper-intermediate)
+- **Smart Word Selection**: Mixes current level words with strategic review content
+- **Automatic Progression**: Levels up based on vocabulary mastery and consistency
+- **Personalized Pace**: Adjusts to individual learning speed and preferences
+
+### 📚 **Comprehensive Vocabulary Database (500+ Words)**
+
+- **CEFR Structured**: Words categorized by A1, A2, B1, B2 difficulty levels
+- **Rich Metadata**: Each word includes:
+  - IPA pronunciation with audio-ready notation
+  - Grammatical information (word type, formality, usage)
+  - Cultural context and regional notes
+  - Related words, synonyms, and word families
+  - Frequency rankings for prioritized learning
+  - Real-world usage examples with translations
+
+### 🧠 **Intelligent Learning Features**
+
+- **Spaced Repetition**: Scientific review scheduling for optimal retention
+- **Progress Tracking**: Detailed statistics on learning journey and achievements
+- **Interactive Quizzes**: Multiple quiz types to reinforce vocabulary
+- **Daily Streaks**: Gamification to maintain consistent learning habits
+- **Weekly Reports**: Comprehensive analytics and personalized recommendations
+
+### 🎓 **Grammar Integration**
+
+- **Daily Grammar Tips**: Contextual grammar lessons alongside vocabulary
+- **Word Type Analysis**: Noun genders, verb conjugations, adjective patterns
+- **Sentence Structure**: German syntax patterns and common constructions
+- **Case System**: Gradual introduction to German cases (Nominativ, Akkusativ, Dativ, Genitiv)
+
+### 🌍 **Cultural Context**
+
+- **Cultural Notes**: When and how to use words appropriately
+- **Formality Levels**: Distinction between formal and informal usage
+- **Regional Variations**: Austrian, Swiss, and German differences
+- **Social Context**: Business vs. casual vs. family usage patterns
+
+### 🧠 **Interactive Learning (Phase 2)**
+
+- **Vocabulary Quizzes**: Multiple-choice questions testing learned words
+- **Spaced Repetition Reviews**: Scientific review scheduling for optimal retention
+- **Weekly Progress Reports**: Comprehensive analytics and learning insights
+- **Achievement System**: Streaks, level-ups, and milestone celebrations
+- **Personalized Recommendations**: AI-powered suggestions based on progress
+
+### 📊 **Advanced Analytics**
+
+- **Learning Pace Analysis**: Words per day and consistency tracking
+- **Category Balance**: Vocabulary distribution across topics
+- **Retention Metrics**: Success rates and review performance
+- **Progress Visualization**: Level completion and goal tracking
+- **Motivational Insights**: Personalized encouragement and next steps
 
 ## 🚀 Quick Start
 
@@ -113,14 +158,30 @@ To add new vocabulary, edit `words.json` following this structure:
 }
 ```
 
-## 🤖 GitHub Actions Automation
+## 🤖 Enhanced GitHub Actions Automation
 
-The bot runs automatically via GitHub Actions:
+The comprehensive learning system runs automatically via GitHub Actions:
 
-- **Schedule**: Daily at 9:00 AM UTC
-- **Trigger**: Can also be run manually from the Actions tab
-- **Environment**: Uses repository secrets for credentials
-- **Logging**: Full execution logs available in Actions tab
+### 📅 **Automated Schedule**
+
+- **Daily Lessons**: Every day at 9:00 AM UTC
+- **Vocabulary Quizzes**: Tuesday, Thursday, Saturday at 7:00 PM UTC
+- **Weekly Reports**: Sunday at 8:00 PM UTC
+- **Manual Triggers**: Run any component on-demand from Actions tab
+
+### ⚙️ **Available Actions**
+
+- `daily_lesson`: Send personalized vocabulary lesson
+- `quiz`: Interactive vocabulary quiz and spaced repetition
+- `weekly_report`: Comprehensive progress analytics
+- `all`: Run all components (for testing)
+
+### 🔧 **Features**
+
+- **Smart Scheduling**: Different content types at optimal times
+- **Progress Persistence**: User data maintained across runs
+- **Comprehensive Logging**: Detailed execution logs and artifacts
+- **Error Handling**: Graceful fallbacks and retry mechanisms
 
 ### Manual Trigger
 

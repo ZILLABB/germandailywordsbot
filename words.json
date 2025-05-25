@@ -5,7 +5,16 @@
     "pronunciation": "/ˈhaloː/",
     "example": "Hallo, wie geht es dir?",
     "example_translation": "Hello, how are you?",
-    "category": "greetings"
+    "category": "greetings",
+    "level": "A1",
+    "frequency": 1,
+    "word_type": "interjection",
+    "grammar_info": {
+      "usage": "informal greeting",
+      "formality": "informal"
+    },
+    "related_words": ["Hi", "Guten Tag", "Servus"],
+    "cultural_note": "Most common informal greeting in German-speaking countries"
   },
   {
     "german": "Guten Morgen",
@@ -13,7 +22,16 @@
     "pronunciation": "/ˈɡuːtən ˈmɔʁɡən/",
     "example": "Guten Morgen! Haben Sie gut geschlafen?",
     "example_translation": "Good morning! Did you sleep well?",
-    "category": "greetings"
+    "category": "greetings",
+    "level": "A1",
+    "frequency": 2,
+    "word_type": "phrase",
+    "grammar_info": {
+      "usage": "morning greeting",
+      "formality": "neutral"
+    },
+    "related_words": ["Morgen", "Guten Tag", "Hallo"],
+    "cultural_note": "Used until approximately 10-11 AM"
   },
   {
     "german": "Guten Tag",
@@ -21,7 +39,16 @@
     "pronunciation": "/ˈɡuːtən taːk/",
     "example": "Guten Tag, kann ich Ihnen helfen?",
     "example_translation": "Good day, can I help you?",
-    "category": "greetings"
+    "category": "greetings",
+    "level": "A1",
+    "frequency": 3,
+    "word_type": "phrase",
+    "grammar_info": {
+      "usage": "formal daytime greeting",
+      "formality": "formal"
+    },
+    "related_words": ["Tag", "Hallo", "Guten Morgen"],
+    "cultural_note": "Standard formal greeting, used in business and with strangers"
   },
   {
     "german": "Guten Abend",
@@ -29,7 +56,16 @@
     "pronunciation": "/ˈɡuːtən ˈaːbənt/",
     "example": "Guten Abend, schön Sie zu sehen!",
     "example_translation": "Good evening, nice to see you!",
-    "category": "greetings"
+    "category": "greetings",
+    "level": "A1",
+    "frequency": 4,
+    "word_type": "phrase",
+    "grammar_info": {
+      "usage": "evening greeting",
+      "formality": "neutral"
+    },
+    "related_words": ["Abend", "Guten Tag", "Hallo"],
+    "cultural_note": "Used from approximately 6 PM onwards"
   },
   {
     "german": "Gute Nacht",
@@ -37,7 +73,16 @@
     "pronunciation": "/ˈɡuːtə naxt/",
     "example": "Gute Nacht und süße Träume!",
     "example_translation": "Good night and sweet dreams!",
-    "category": "greetings"
+    "category": "greetings",
+    "level": "A1",
+    "frequency": 5,
+    "word_type": "phrase",
+    "grammar_info": {
+      "usage": "bedtime farewell",
+      "formality": "neutral"
+    },
+    "related_words": ["Nacht", "schlafen", "Träume"],
+    "cultural_note": "Only used when someone is going to sleep, not as a general evening goodbye"
   },
   {
     "german": "Auf Wiedersehen",
