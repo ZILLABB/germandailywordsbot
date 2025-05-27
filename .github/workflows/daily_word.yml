@@ -39,14 +39,9 @@ jobs:
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
             echo "action=${{ github.event.inputs.action }}" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event.schedule }}" = "0 9 * * *" ]; then
-            echo "action=daily_lesson" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event.schedule }}" = "0 19 * * 2,4,6" ]; then
-            echo "action=quiz" >> $GITHUB_OUTPUT
-          elif [ "${{ github.event.schedule }}" = "0 20 * * 0" ]; then
-            echo "action=weekly_report" >> $GITHUB_OUTPUT
           else
             echo "action=daily_lesson" >> $GITHUB_OUTPUT
+          fi
 
   german-learning-system:
     needs: determine-action
