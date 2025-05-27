@@ -2,14 +2,10 @@ name: German Learning System
 
 on:
   schedule:
-    # Daily vocabulary lesson at 9:00 AM UTC
     - cron: '0 9 * * *'
-    # Quiz sessions on Tuesday, Thursday, Saturday at 7:00 PM UTC
     - cron: '0 19 * * 2,4,6'
-    # Weekly report on Sunday at 8:00 PM UTC
     - cron: '0 20 * * 0'
 
-  # Allow manual triggering
   workflow_dispatch:
     inputs:
       action:
@@ -18,19 +14,19 @@ on:
         default: 'daily_lesson'
         type: choice
         options:
-        - 'daily_lesson'
-        - 'quiz'
-        - 'weekly_report'
-        - 'all'
+          - 'daily_lesson'
+          - 'quiz'
+          - 'weekly_report'
+          - 'all'
       words_per_day:
         description: 'Number of words to send (3-5)'
         required: false
         default: '3'
         type: choice
         options:
-        - '3'
-        - '4'
-        - '5'
+          - '3'
+          - '4'
+          - '5'
 
 jobs:
   determine-action:
@@ -38,83 +34,83 @@ jobs:
     outputs:
       action: ${{ steps.determine.outputs.action }}
     steps:
-    - name: Determine action based on schedule or input
-      id: determine
-      run: |
-        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-          echo "action=${{ github.event.inputs.action }}" >> $GITHUB_OUTPUT
-        elif [ "${{ github.event.schedule }}" = "0 9 * * *" ]; then
-          echo "action=daily_lesson" >> $GITHUB_OUTPUT
-        elif [ "${{ github.event.schedule }}" = "0 19 * * 2,4,6" ]; then
-          echo "action=quiz" >> $GITHUB_OUTPUT
-        elif [ "${{ github.event.schedule }}" = "0 20 * * 0" ]; then
-          echo "action=weekly_report" >> $GITHUB_OUTPUT
-        else
-          echo "action=daily_lesson" >> $GITHUB_OUTPUT
-        fi
+      - name: Determine action based on schedule or input
+        id: determine
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "action=${{ github.event.inputs.action }}" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 9 * * *" ]; then
+            echo "action=daily_lesson" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 19 * * 2,4,6" ]; then
+            echo "action=quiz" >> $GITHUB_OUTPUT
+          elif [ "${{ github.event.schedule }}" = "0 20 * * 0" ]; then
+            echo "action=weekly_report" >> $GITHUB_OUTPUT
+          else
+            echo "action=daily_lesson" >> $GITHUB_OUTPUT
 
   german-learning-system:
     needs: determine-action
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-    - name: Set up Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: '3.11'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
 
-    - name: Cache pip dependencies
-      uses: actions/cache@v3
-      with:
-        path: ~/.cache/pip
-        key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
-        restore-keys: |
-          ${{ runner.os }}-pip-
+      - name: Cache pip dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Send daily German lesson
-      if: needs.determine-action.outputs.action == 'daily_lesson' || needs.determine-action.outputs.action == 'all'
-      env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        CHAT_ID: ${{ secrets.CHAT_ID }}
-        WORDS_PER_DAY: ${{ github.event.inputs.words_per_day || '3' }}
-      run: |
-        echo "🇩🇪 Sending daily German lesson..."
-        echo "Words per day: $WORDS_PER_DAY"
-        python send_word.py
+      - name: Send daily German lesson
+        if: needs.determine-action.outputs.action == 'daily_lesson' || needs.determine-action.outputs.action == 'all'
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+          WORDS_PER_DAY: ${{ github.event.inputs.words_per_day || '3' }}
+        run: |
+          echo "🇩🇪 Sending daily German lesson..."
+          echo "Words per day: $WORDS_PER_DAY"
+          python send_word.py
 
-    - name: Send vocabulary quiz
-      if: needs.determine-action.outputs.action == 'quiz' || needs.determine-action.outputs.action == 'all'
-      env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        CHAT_ID: ${{ secrets.CHAT_ID }}
-      run: |
-        echo "🧠 Sending vocabulary quiz..."
-        python send_quiz.py
+      - name: Send vocabulary quiz
+        if: needs.determine-action.outputs.action == 'quiz' || needs.determine-action.outputs.action == 'all'
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: |
+          echo "🧠 Sending vocabulary quiz..."
+          python send_quiz.py
 
-    - name: Send weekly report
-      if: needs.determine-action.outputs.action == 'weekly_report' || needs.determine-action.outputs.action == 'all'
-      env:
-        BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-        CHAT_ID: ${{ secrets.CHAT_ID }}
-      run: |
-        echo "📊 Sending weekly progress report..."
-        python send_weekly_report.py
+      - name: Send weekly report
+        if: needs.determine-action.outputs.action == 'weekly_report' || needs.determine-action.outputs.action == 'all'
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+          CHAT_ID: ${{ secrets.CHAT_ID }}
+        run: |
+          echo "📊 Sending weekly progress report..."
+          python send_weekly_report.py
 
-    - name: Upload logs and progress files
-      uses: actions/upload-artifact@v3
-      if: always()
-      with:
-        name: learning-system-logs
-        path: |
-          *.log
-          progress_*.json
-          quiz_*.json
-        retention-days: 30
+      - name: Upload logs and progress files
+        uses: actions/upload-artifact@v3.1.3
+        if: always()
+        with:
+          name: learning-system-logs
+          path: |
+            *.log
+            progress_*.json
+            quiz_*.json
+          retention-days: 30
+          if-no-files-found: warn
