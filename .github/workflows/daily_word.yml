@@ -109,7 +109,7 @@ jobs:
         python send_weekly_report.py
 
     - name: Upload logs and progress files
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v3.1.3
       if: always()
       with:
         name: learning-system-logs
