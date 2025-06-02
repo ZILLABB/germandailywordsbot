@@ -69,34 +69,38 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Send daily German lesson
+      - name: Handle new user registrations
+        env:
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
+        run: |
+          echo "👥 Processing new user registrations..."
+          python handle_new_users.py
+
+      - name: Send daily German lessons to all users
         if: needs.determine-action.outputs.action == 'daily_lesson' || needs.determine-action.outputs.action == 'all'
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
           WORDS_PER_DAY: ${{ github.event.inputs.words_per_day || '3' }}
         run: |
-          echo "🇩🇪 Sending daily German lesson..."
+          echo "🇩🇪 Sending daily German lessons to all registered users..."
           echo "Words per day: $WORDS_PER_DAY"
-          python send_word.py
+          python multi_user_bot.py
 
-      - name: Send vocabulary quiz
+      - name: Send vocabulary quizzes to all users
         if: needs.determine-action.outputs.action == 'quiz' || needs.determine-action.outputs.action == 'all'
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
-          echo "🧠 Sending vocabulary quiz..."
-          python send_quiz.py
+          echo "🧠 Sending vocabulary quizzes to all registered users..."
+          python multi_user_quiz.py
 
-      - name: Send weekly report
+      - name: Send weekly reports to all users
         if: needs.determine-action.outputs.action == 'weekly_report' || needs.determine-action.outputs.action == 'all'
         env:
           BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
-          CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
-          echo "📊 Sending weekly progress report..."
-          python send_weekly_report.py
+          echo "📊 Sending weekly progress reports to all registered users..."
+          python multi_user_reports.py
 
       - name: Upload logs and progress files
         uses: actions/upload-artifact@v4
