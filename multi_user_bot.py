@@ -92,35 +92,43 @@ class MultiUserGermanBot:
                 return self.send_message(chat_id, message)
             
             # Enhanced lesson with progress tracking
-            user_progress = UserProgress(str(chat_id))
-            
+            user_progress = UserProgress(str(chat_id), self.vocabulary_manager)
+
             # Get user's current level and learned words
             user_level = user_progress.get_current_level()
             learned_words = []
             for level_data in user_progress.data['words_by_level'].values():
                 learned_words.extend(level_data['learned'])
-            
+
             # Get progressive words
             daily_words = self.vocabulary_manager.get_progressive_words(
                 user_level, 3, learned_words
             )
-            
+
             if not daily_words:
                 return False
-            
+
             # Format enhanced message
             message = self.format_user_lesson(daily_words, user_progress)
-            
+
             # Send lesson
             success = self.send_message(chat_id, message)
-            
+
             if success:
-                # Update progress
-                user_progress.update_daily_streak()
+                # Update progress with enhanced tracking
+                streak_info = user_progress.update_daily_streak(daily_words)
                 for word in daily_words:
                     if 'level' not in word:
                         word['level'] = 'A1'
                     user_progress.add_learned_word(word)
+
+                # Add streak message if milestone reached
+                if streak_info and (streak_info.get('milestone_reached') or
+                                  streak_info.get('grace_period_used') or
+                                  streak_info.get('streak_recovered')):
+                    streak_message = user_progress.get_streak_message(streak_info)
+                    self.send_message(chat_id, f"\n\n{streak_message}")
+
                 user_progress.save_progress()
             
             return success

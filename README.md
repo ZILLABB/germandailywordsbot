@@ -1,101 +1,86 @@
-# 🇩🇪 German Daily Word Bot - Enhanced Learning System
+# 🇩🇪 German Daily Word Bot
 
-A comprehensive Telegram bot that provides personalized German language learning with CEFR level progression, spaced repetition, and interactive features. Transform your German vocabulary learning journey!
+An advanced AI-powered Telegram bot for learning German with enterprise-level features including adaptive quizzes, comprehensive analytics, and intelligent progress tracking.
 
-## ✨ Enhanced Features
+## 🌟 Features
 
-### 🎯 **Progressive Difficulty System (CEFR Levels)**
+### 📚 **Core Learning Features**
 
-- **Adaptive Learning**: Starts with A1 (beginner) and progresses to B2 (upper-intermediate)
-- **Smart Word Selection**: Mixes current level words with strategic review content
-- **Automatic Progression**: Levels up based on vocabulary mastery and consistency
-- **Personalized Pace**: Adjusts to individual learning speed and preferences
+- **Daily German Lessons**: 3-5 words with pronunciation, examples, and cultural context
+- **Progressive Difficulty**: CEFR levels A1 → A2 → B1 → B2 with automatic advancement
+- **Spaced Repetition**: Intelligent review scheduling for optimal retention
 
-### 📚 **Comprehensive Vocabulary Database (500+ Words)**
+### 🧠 **Advanced Quiz System (Phase 2)**
 
-- **CEFR Structured**: Words categorized by A1, A2, B1, B2 difficulty levels
-- **Rich Metadata**: Each word includes:
-  - IPA pronunciation with audio-ready notation
-  - Grammatical information (word type, formality, usage)
-  - Cultural context and regional notes
-  - Related words, synonyms, and word families
-  - Frequency rankings for prioritized learning
-  - Real-world usage examples with translations
+- **6 Question Types**: Fill-in-blank, sentence construction, contextual usage, grammar focus, audio recognition, reverse translation
+- **Adaptive Difficulty**: Questions automatically adjust to user skill level
+- **4 Quiz Modes**: Adaptive, mastery-focused, progressive difficulty, weak areas
+- **Intelligent Word Selection**: AI prioritizes words based on mastery and performance
 
-### 🧠 **Intelligent Learning Features**
+### 🔥 **Advanced Streak System (Phase 1)**
 
-- **Spaced Repetition**: Scientific review scheduling for optimal retention
-- **Progress Tracking**: Detailed statistics on learning journey and achievements
-- **Interactive Quizzes**: Multiple quiz types to reinforce vocabulary
-- **Daily Streaks**: Gamification to maintain consistent learning habits
-- **Weekly Reports**: Comprehensive analytics and personalized recommendations
+- **9 Milestone Levels**: From 7-day "Week Warrior" to 1000-day "Millennium Master"
+- **Streak Protection**: Grace periods and streak freezes to prevent frustration
+- **Achievement System**: Unlock rewards and bonuses for consistency
 
-### 🎓 **Grammar Integration**
+### 📊 **Comprehensive Analytics (Phase 1)**
 
-- **Daily Grammar Tips**: Contextual grammar lessons alongside vocabulary
-- **Word Type Analysis**: Noun genders, verb conjugations, adjective patterns
-- **Sentence Structure**: German syntax patterns and common constructions
-- **Case System**: Gradual introduction to German cases (Nominativ, Akkusativ, Dativ, Genitiv)
+- **Learning Insights**: Study patterns, strengths/weaknesses, retention rates
+- **Performance Tracking**: Quiz scores, category breakdown, progress trends
+- **Predictive Analytics**: Engagement risk assessment, 30-day projections
+- **Weekly Reports**: Automated comprehensive learning summaries
 
-### 🌍 **Cultural Context**
+### 👥 **Multi-User Support**
 
-- **Cultural Notes**: When and how to use words appropriately
-- **Formality Levels**: Distinction between formal and informal usage
-- **Regional Variations**: Austrian, Swiss, and German differences
-- **Social Context**: Business vs. casual vs. family usage patterns
-
-### 🧠 **Interactive Learning (Phase 2)**
-
-- **Vocabulary Quizzes**: Multiple-choice questions testing learned words
-- **Spaced Repetition Reviews**: Scientific review scheduling for optimal retention
-- **Weekly Progress Reports**: Comprehensive analytics and learning insights
-- **Achievement System**: Streaks, level-ups, and milestone celebrations
-- **Personalized Recommendations**: AI-powered suggestions based on progress
-
-### 📊 **Advanced Analytics**
-
-- **Learning Pace Analysis**: Words per day and consistency tracking
-- **Category Balance**: Vocabulary distribution across topics
-- **Retention Metrics**: Success rates and review performance
-- **Progress Visualization**: Level completion and goal tracking
-- **Motivational Insights**: Personalized encouragement and next steps
+- **Unlimited Users**: Independent progress tracking for each user
+- **Real-Time Commands**: 8 interactive commands with instant responses
+- **User Management**: Automatic registration and onboarding
 
 ## 🚀 Quick Start
 
-### 1. Create Your Telegram Bot
+### Prerequisites
 
-1. Message [@BotFather](https://t.me/BotFather) on Telegram
-2. Send `/newbot` and follow the instructions
-3. Save your bot token (looks like `123456789:ABCdefGHIjklMNOpqrsTUVwxyz`)
-4. Send a message to your new bot to activate it
+- Python 3.7+
+- Telegram Bot Token (from @BotFather)
+- Your Telegram Chat ID
 
-### 2. Get Your Chat ID
+### Installation
 
-1. Clone this repository
-2. Copy `.env.example` to `.env`
-3. Add your bot token to the `.env` file
-4. Install dependencies: `pip install -r requirements.txt`
-5. Run: `python get_chat_id.py`
-6. Add the returned chat ID to your `.env` file
+1. **Clone the repository**
 
-### 3. Test the Bot
+   ```bash
+   git clone https://github.com/ZILLABB/germandailywordsbot.git
+   cd germandailywordsbot
+   ```
 
-```bash
-# Test the connection
-python test_bot.py
+2. **Install dependencies**
 
-# Send a manual lesson
-python send_word.py
-```
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-### 4. Set Up Automation
+3. **Set up environment variables**
 
-1. Push your code to GitHub (without the `.env` file!)
-2. Go to your repository Settings → Secrets and variables → Actions
-3. Add these secrets:
-   - `BOT_TOKEN`: Your Telegram bot token
-   - `CHAT_ID`: Your chat ID
-4. The GitHub Action will automatically run daily at 9:00 AM UTC
+   ```bash
+   # Create .env file
+   cp .env.example .env
+
+   # Edit .env with your credentials
+   BOT_TOKEN=your_telegram_bot_token_here
+   CHAT_ID=your_telegram_chat_id_here
+   WORDS_PER_DAY=3
+   ```
+
+4. **Test the bot**
+
+   ```bash
+   python test_bot_functionality.py
+   ```
+
+5. **Start the bot**
+   ```bash
+   python run_telegram_bot.py
+   ```
 
 ## 📁 Project Structure
 

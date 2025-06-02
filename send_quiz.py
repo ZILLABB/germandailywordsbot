@@ -15,9 +15,12 @@ try:
     from user_progress import UserProgress
     from vocabulary_manager import VocabularyManager
     from quiz_system import QuizSystem
+    from enhanced_quiz_system import EnhancedQuizSystem
     ENHANCED_MODE = True
+    ENHANCED_QUIZ_MODE = True
 except ImportError:
     ENHANCED_MODE = False
+    ENHANCED_QUIZ_MODE = False
     print("Enhanced modules not available. Quiz system requires enhanced mode.")
     exit(1)
 
@@ -50,14 +53,24 @@ class GermanQuizBot:
         
         # Initialize systems
         self.vocabulary_manager = VocabularyManager()
-        self.user_progress = UserProgress(self.chat_id)
+        self.user_progress = UserProgress(self.chat_id, self.vocabulary_manager)
+
+        # Initialize enhanced quiz system if available
+        if ENHANCED_QUIZ_MODE:
+            self.enhanced_quiz = EnhancedQuizSystem(self.vocabulary_manager, self.user_progress)
+        else:
+            self.enhanced_quiz = None
+
         self.quiz_system = QuizSystem(self.vocabulary_manager, self.user_progress)
         
         logger.info(f"Quiz bot initialized for user {self.chat_id}")
     
     def should_send_quiz_today(self) -> bool:
         """Check if a quiz should be sent today"""
-        return self.quiz_system.should_send_quiz()
+        if self.enhanced_quiz:
+            return self.enhanced_quiz.should_send_enhanced_quiz()
+        else:
+            return self.quiz_system.should_send_quiz()
     
     def send_message(self, message):
         """Send message via Telegram Bot API"""
@@ -89,25 +102,29 @@ class GermanQuizBot:
             logger.error(f"Unexpected error sending message: {e}")
             return False
     
-    def send_vocabulary_quiz(self):
-        """Send an interactive vocabulary quiz"""
+    def send_vocabulary_quiz(self, quiz_type: str = 'adaptive'):
+        """Send an interactive vocabulary quiz with enhanced features"""
         try:
-            # Generate quiz
-            quiz_data = self.quiz_system.generate_quiz(word_count=5)
-            
+            # Generate quiz using enhanced system if available
+            if self.enhanced_quiz:
+                quiz_data = self.enhanced_quiz.generate_enhanced_quiz(quiz_type, word_count=5)
+                quiz_message = self.enhanced_quiz.format_enhanced_quiz_message(quiz_data)
+                quiz_info = f"Enhanced quiz ({quiz_type})"
+            else:
+                quiz_data = self.quiz_system.generate_quiz(word_count=5)
+                quiz_message = self.quiz_system.format_quiz_message(quiz_data)
+                quiz_info = "Standard quiz"
+
             if not quiz_data:
                 logger.info("No quiz data available - user needs more learned words")
                 return False
-            
-            # Format quiz message
-            quiz_message = self.quiz_system.format_quiz_message(quiz_data)
-            
+
             # Send quiz
             success = self.send_message(quiz_message)
-            
+
             if success:
-                logger.info(f"Vocabulary quiz sent successfully with {len(quiz_data['questions'])} questions")
-                
+                logger.info(f"{quiz_info} sent successfully with {len(quiz_data['questions'])} questions")
+
                 # Save quiz data for potential future processing
                 quiz_filename = f"quiz_{self.chat_id}_{datetime.now().strftime('%Y%m%d')}.json"
                 try:
@@ -117,12 +134,12 @@ class GermanQuizBot:
                     logger.info(f"Quiz data saved to {quiz_filename}")
                 except Exception as e:
                     logger.warning(f"Could not save quiz data: {e}")
-                
+
                 return True
             else:
                 logger.error("Failed to send vocabulary quiz")
                 return False
-                
+
         except Exception as e:
             logger.error(f"Error generating/sending quiz: {e}")
             return False

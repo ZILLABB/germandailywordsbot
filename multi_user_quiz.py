@@ -110,7 +110,7 @@ class MultiUserQuizBot:
     def send_quiz_to_user(self, chat_id):
         """Send quiz to a specific user"""
         try:
-            user_progress = UserProgress(str(chat_id))
+            user_progress = UserProgress(str(chat_id), self.vocabulary_manager)
             quiz_system = QuizSystem(self.vocabulary_manager, user_progress)
             
             # Check if user should get a quiz

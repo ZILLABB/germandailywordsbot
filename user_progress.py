@@ -12,11 +12,31 @@ import logging
 
 logger = logging.getLogger(__name__)
 
+# Import new analytics modules
+try:
+    from streak_manager import StreakManager
+    from learning_analytics import LearningAnalytics
+    ANALYTICS_AVAILABLE = True
+except ImportError:
+    ANALYTICS_AVAILABLE = False
+    logger.warning("Advanced analytics modules not available")
+
 class UserProgress:
-    def __init__(self, chat_id: str):
+    def __init__(self, chat_id: str, vocabulary_manager=None):
         self.chat_id = chat_id
         self.progress_file = f"progress_{chat_id}.json"
         self.data = self.load_progress()
+
+        # Initialize advanced analytics if available
+        if ANALYTICS_AVAILABLE:
+            self.streak_manager = StreakManager(self)
+            if vocabulary_manager:
+                self.learning_analytics = LearningAnalytics(self, vocabulary_manager)
+            else:
+                self.learning_analytics = None
+        else:
+            self.streak_manager = None
+            self.learning_analytics = None
     
     def load_progress(self) -> Dict:
         """Load user progress from file or create new profile"""
@@ -32,12 +52,28 @@ class UserProgress:
                 "B2": {"learned": [], "review_due": []}
             },
             "daily_streak": 0,
+            "longest_streak": 0,
+            "total_study_days": 0,
+            "streak_milestones": [],
             "last_lesson_date": None,
+            "streak_freeze_used": 0,
+            "streak_freeze_available": 1,
+            "grace_period_active": False,
+            "grace_period_expires": None,
             "quiz_scores": [],
             "weekly_goals": {
                 "words_per_week": 21,  # 3 words × 7 days
                 "current_week_count": 0,
                 "week_start": datetime.now().isoformat()
+            },
+            "learning_analytics": {
+                "session_times": [],
+                "daily_word_counts": {},
+                "category_performance": {},
+                "difficulty_progression": [],
+                "retention_rates": {},
+                "learning_velocity": 0.0,
+                "engagement_score": 0.0
             },
             "preferences": {
                 "words_per_day": 3,
@@ -187,39 +223,57 @@ class UserProgress:
         
         return None
     
-    def update_daily_streak(self):
-        """Update daily learning streak"""
-        today = datetime.now().date().isoformat()
-        last_lesson = self.data.get('last_lesson_date')
-        
-        if last_lesson:
-            last_date = datetime.fromisoformat(last_lesson).date()
-            today_date = datetime.now().date()
-            
-            if last_date == today_date:
-                # Already learned today
-                return
-            elif last_date == today_date - timedelta(days=1):
-                # Consecutive day
-                self.data['daily_streak'] += 1
-            else:
-                # Streak broken
-                self.data['daily_streak'] = 1
+    def update_daily_streak(self, words_learned: List[Dict] = None):
+        """Update daily learning streak with advanced tracking"""
+        if self.streak_manager:
+            # Use advanced streak manager
+            streak_info = self.streak_manager.update_streak()
+
+            # Track learning session if analytics available
+            if self.learning_analytics and words_learned:
+                self.learning_analytics.track_learning_session(words_learned)
+                self.learning_analytics.save_analytics()
+
+            return streak_info
         else:
-            # First lesson
-            self.data['daily_streak'] = 1
-        
-        self.data['last_lesson_date'] = today
-        
-        # Check for streak achievements
-        streak = self.data['daily_streak']
-        if streak in [7, 30, 100, 365]:
-            achievement = {
-                'type': 'streak',
-                'days': streak,
-                'date': datetime.now().isoformat()
-            }
-            self.data['achievements'].append(achievement)
+            # Fallback to basic streak tracking
+            today = datetime.now().date().isoformat()
+            last_lesson = self.data.get('last_lesson_date')
+
+            if last_lesson:
+                last_date = datetime.fromisoformat(last_lesson).date()
+                today_date = datetime.now().date()
+
+                if last_date == today_date:
+                    # Already learned today
+                    return {'streak_continued': False, 'streak_broken': False}
+                elif last_date == today_date - timedelta(days=1):
+                    # Consecutive day
+                    self.data['daily_streak'] += 1
+                    streak_info = {'streak_continued': True, 'streak_broken': False}
+                else:
+                    # Streak broken
+                    self.data['daily_streak'] = 1
+                    streak_info = {'streak_continued': False, 'streak_broken': True}
+            else:
+                # First lesson
+                self.data['daily_streak'] = 1
+                streak_info = {'streak_continued': True, 'streak_broken': False}
+
+            self.data['last_lesson_date'] = today
+
+            # Check for streak achievements
+            streak = self.data['daily_streak']
+            if streak in [7, 30, 100, 365]:
+                achievement = {
+                    'type': 'streak',
+                    'days': streak,
+                    'date': datetime.now().isoformat()
+                }
+                self.data['achievements'].append(achievement)
+                streak_info['milestone_reached'] = streak
+
+            return streak_info
     
     def get_current_level(self) -> str:
         """Get user's current CEFR level"""
@@ -246,4 +300,51 @@ class UserProgress:
     def update_preferences(self, preferences: Dict):
         """Update user preferences"""
         self.data['preferences'].update(preferences)
+        self.save_progress()
+
+    def get_advanced_stats(self) -> Dict:
+        """Get comprehensive learning statistics with analytics"""
+        basic_stats = self.get_stats()
+
+        if self.streak_manager:
+            streak_stats = self.streak_manager.get_streak_stats()
+            basic_stats.update(streak_stats)
+
+        if self.learning_analytics:
+            insights = self.learning_analytics.get_learning_insights()
+            basic_stats['learning_insights'] = insights
+
+            predictive = self.learning_analytics.get_predictive_insights()
+            basic_stats['predictive_insights'] = predictive
+
+        return basic_stats
+
+    def get_streak_message(self, streak_info: Dict) -> str:
+        """Get formatted streak message"""
+        if self.streak_manager:
+            return self.streak_manager.format_streak_message(streak_info)
+        else:
+            # Basic streak message
+            if streak_info.get('milestone_reached'):
+                return f"🎉 Milestone reached: {streak_info['milestone_reached']} day streak!"
+            elif streak_info.get('streak_continued'):
+                return f"🔥 Streak continues: {self.data['daily_streak']} days!"
+            elif streak_info.get('streak_broken'):
+                return "💔 Streak broken, but starting fresh!"
+            else:
+                return "📚 Keep learning!"
+
+    def track_quiz_performance(self, quiz_results: Dict):
+        """Track quiz performance for analytics"""
+        if self.learning_analytics:
+            self.learning_analytics.track_quiz_performance(quiz_results)
+            self.learning_analytics.save_analytics()
+
+        # Also add to basic quiz scores
+        self.data['quiz_scores'].append({
+            'date': datetime.now().isoformat(),
+            'score': quiz_results.get('score', 0),
+            'total': quiz_results.get('total', 0),
+            'percentage': quiz_results.get('percentage', 0)
+        })
         self.save_progress()

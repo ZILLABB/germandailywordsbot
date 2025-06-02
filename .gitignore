@@ -1,5 +1,13 @@
-# Environment variables
+# Environment Variables (CRITICAL - Never commit tokens!)
 .env
+.env.local
+.env.production
+.env.staging
+
+# User Data Files (Contains personal learning progress)
+progress_*.json
+active_users.json
+quiz_*.json
 
 # Python
 __pycache__/

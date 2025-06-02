@@ -1,2 +1,16 @@
+# German Daily Word Bot - Python Dependencies
+
+# Core Dependencies (Required)
 requests>=2.31.0
 python-dotenv>=1.0.0
+
+# Optional Dependencies for Enhanced Features
+flask>=2.3.0
+
+# Development Dependencies (Optional)
+pytest>=7.4.0
+black>=23.0.0
+flake8>=6.0.0
+
+# Note: The bot uses minimal dependencies for maximum compatibility
+# Only requests and python-dotenv are strictly required
