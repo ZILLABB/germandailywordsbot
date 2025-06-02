@@ -2,13 +2,36 @@
   "chat_id": "1224491488",
   "current_level": "A1",
   "start_date": "2025-05-25T23:55:57.986421",
-  "total_words_learned": 3,
+  "total_words_learned": 26,
   "words_by_level": {
     "A1": {
       "learned": [
         "Käse",
         "Banane",
-        "Gelb"
+        "Gelb",
+        "Hallo",
+        "Danke",
+        "Wasser",
+        "Brot",
+        "Haus",
+        "Mutter",
+        "Wohnung",
+        "Fünf",
+        "Entschuldigung",
+        "Kaffee",
+        "Guten Morgen",
+        "Flugzeug",
+        "Küche",
+        "Milch",
+        "Zimmer",
+        "Es tut mir leid",
+        "Schwarz",
+        "Vater",
+        "Guten Tag",
+        "Neun",
+        "Acht",
+        "Eins",
+        "Heute"
       ],
       "review_due": []
     },
@@ -26,7 +49,7 @@
     }
   },
   "daily_streak": 1,
-  "last_lesson_date": "2025-05-25",
+  "last_lesson_date": "2025-06-02",
   "quiz_scores": [],
   "weekly_goals": {
     "words_per_week": 21,
@@ -106,6 +129,710 @@
       ],
       "last_reviewed": "2025-05-25T23:55:58.581182",
       "success_rate": 0.0
+    },
+    "Hallo": {
+      "word_data": {
+        "german": "Hallo",
+        "english": "Hello",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:40:18.338261",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:40:18.338261",
+      "success_rate": 0.0
+    },
+    "Danke": {
+      "word_data": {
+        "german": "Danke",
+        "english": "Thank you",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:40:18.338261",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:40:18.338261",
+      "success_rate": 0.0
+    },
+    "Wasser": {
+      "word_data": {
+        "german": "Wasser",
+        "english": "Water",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:40:18.338261",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:40:18.338261",
+      "success_rate": 0.0
+    },
+    "Brot": {
+      "word_data": {
+        "german": "Brot",
+        "english": "Bread",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:40:18.338261",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:40:18.338261",
+      "success_rate": 0.0
+    },
+    "Haus": {
+      "word_data": {
+        "german": "Haus",
+        "english": "House",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:40:18.338261",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:40:18.338261",
+      "success_rate": 0.0
+    },
+    "Mutter": {
+      "word_data": {
+        "german": "Mutter",
+        "english": "Mother",
+        "pronunciation": "/ˈmʊtɐ/",
+        "example": "Meine Mutter kocht sehr gut.",
+        "example_translation": "My mother cooks very well.",
+        "category": "family",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:42:10.213819",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:42:10.213819",
+      "success_rate": 0.0
+    },
+    "Wohnung": {
+      "word_data": {
+        "german": "Wohnung",
+        "english": "Apartment",
+        "pronunciation": "/ˈvoːnʊŋ/",
+        "example": "Die Wohnung hat drei Zimmer.",
+        "example_translation": "The apartment has three rooms.",
+        "category": "home",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:42:10.213819",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:42:10.213819",
+      "success_rate": 0.0
+    },
+    "Fünf": {
+      "word_data": {
+        "german": "Fünf",
+        "english": "Five",
+        "pronunciation": "/fʏnf/",
+        "example": "Der Bus kommt in fünf Minuten.",
+        "example_translation": "The bus comes in five minutes.",
+        "category": "numbers",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T19:42:10.213819",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T19:42:10.213819",
+      "success_rate": 0.0
+    },
+    "Entschuldigung": {
+      "word_data": {
+        "german": "Entschuldigung",
+        "english": "Excuse me/Sorry",
+        "pronunciation": "/ɛntˈʃʊldɪɡʊŋ/",
+        "example": "Entschuldigung, wo ist der Bahnhof?",
+        "example_translation": "Excuse me, where is the train station?",
+        "category": "politeness",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:15:28.078810",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:15:28.078810",
+      "success_rate": 0.0
+    },
+    "Kaffee": {
+      "word_data": {
+        "german": "Kaffee",
+        "english": "Coffee",
+        "pronunciation": "/ˈkafe/",
+        "example": "Ich trinke jeden Morgen Kaffee.",
+        "example_translation": "I drink coffee every morning.",
+        "category": "food_drink",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:15:28.078810",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:15:28.078810",
+      "success_rate": 0.0
+    },
+    "Guten Morgen": {
+      "word_data": {
+        "german": "Guten Morgen",
+        "english": "Good morning",
+        "pronunciation": "/ˈɡuːtən ˈmɔʁɡən/",
+        "example": "Guten Morgen! Haben Sie gut geschlafen?",
+        "example_translation": "Good morning! Did you sleep well?",
+        "category": "greetings",
+        "level": "A1",
+        "frequency": 2,
+        "word_type": "phrase",
+        "grammar_info": {
+          "usage": "morning greeting",
+          "formality": "neutral"
+        },
+        "related_words": [
+          "Morgen",
+          "Guten Tag",
+          "Hallo"
+        ],
+        "cultural_note": "Used until approximately 10-11 AM"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:15:28.078810",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:15:28.078810",
+      "success_rate": 0.0
+    },
+    "Flugzeug": {
+      "word_data": {
+        "german": "Flugzeug",
+        "english": "Airplane",
+        "pronunciation": "/ˈfluːkˌtsɔɪk/",
+        "example": "Das Flugzeug fliegt sehr hoch.",
+        "example_translation": "The airplane flies very high.",
+        "category": "transport",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:15:51.701353",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:15:51.701353",
+      "success_rate": 0.0
+    },
+    "Küche": {
+      "word_data": {
+        "german": "Küche",
+        "english": "Kitchen",
+        "pronunciation": "/ˈkʏçə/",
+        "example": "Ich koche gern in der Küche.",
+        "example_translation": "I like to cook in the kitchen.",
+        "category": "home",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:15:51.701353",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:15:51.701353",
+      "success_rate": 0.0
+    },
+    "Milch": {
+      "word_data": {
+        "german": "Milch",
+        "english": "Milk",
+        "pronunciation": "/mɪlç/",
+        "example": "Die Milch ist frisch.",
+        "example_translation": "The milk is fresh.",
+        "category": "food_drink",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:15:51.701353",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:15:51.701353",
+      "success_rate": 0.0
+    },
+    "Zimmer": {
+      "word_data": {
+        "german": "Zimmer",
+        "english": "Room",
+        "pronunciation": "/ˈtsɪmɐ/",
+        "example": "Das Zimmer ist sehr hell.",
+        "example_translation": "The room is very bright.",
+        "category": "home",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:32:50.789940",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:32:50.789940",
+      "success_rate": 0.0
+    },
+    "Es tut mir leid": {
+      "word_data": {
+        "german": "Es tut mir leid",
+        "english": "I'm sorry",
+        "pronunciation": "/ɛs tuːt miːɐ̯ laɪt/",
+        "example": "Es tut mir leid, das war mein Fehler.",
+        "example_translation": "I'm sorry, that was my mistake.",
+        "category": "politeness",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:32:50.789940",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:32:50.789940",
+      "success_rate": 0.0
+    },
+    "Schwarz": {
+      "word_data": {
+        "german": "Schwarz",
+        "english": "Black",
+        "pronunciation": "/ʃvaʁts/",
+        "example": "Die Katze ist schwarz.",
+        "example_translation": "The cat is black.",
+        "category": "colors",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:32:50.789940",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:32:50.789940",
+      "success_rate": 0.0
+    },
+    "Vater": {
+      "word_data": {
+        "german": "Vater",
+        "english": "Father",
+        "pronunciation": "/ˈfaːtɐ/",
+        "example": "Mein Vater arbeitet im Büro.",
+        "example_translation": "My father works in the office.",
+        "category": "family",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:32:51.220200",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:32:51.220200",
+      "success_rate": 0.0
+    },
+    "Guten Tag": {
+      "word_data": {
+        "german": "Guten Tag",
+        "english": "Good day/afternoon",
+        "pronunciation": "/ˈɡuːtən taːk/",
+        "example": "Guten Tag, kann ich Ihnen helfen?",
+        "example_translation": "Good day, can I help you?",
+        "category": "greetings",
+        "level": "A1",
+        "frequency": 3,
+        "word_type": "phrase",
+        "grammar_info": {
+          "usage": "formal daytime greeting",
+          "formality": "formal"
+        },
+        "related_words": [
+          "Tag",
+          "Hallo",
+          "Guten Morgen"
+        ],
+        "cultural_note": "Standard formal greeting, used in business and with strangers"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:32:51.220200",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:32:51.220200",
+      "success_rate": 0.0
+    },
+    "Neun": {
+      "word_data": {
+        "german": "Neun",
+        "english": "Nine",
+        "pronunciation": "/nɔɪn/",
+        "example": "Das Spiel dauert neun Runden.",
+        "example_translation": "The game lasts nine rounds.",
+        "category": "numbers",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:32:51.220200",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:32:51.220200",
+      "success_rate": 0.0
+    },
+    "Acht": {
+      "word_data": {
+        "german": "Acht",
+        "english": "Eight",
+        "pronunciation": "/axt/",
+        "example": "Ich stehe um acht Uhr auf.",
+        "example_translation": "I get up at eight o'clock.",
+        "category": "numbers",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:33:01.831484",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:33:01.831484",
+      "success_rate": 0.0
+    },
+    "Eins": {
+      "word_data": {
+        "german": "Eins",
+        "english": "One",
+        "pronunciation": "/aɪns/",
+        "example": "Ich hätte gern eins davon.",
+        "example_translation": "I would like one of those.",
+        "category": "numbers",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:33:01.832574",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:33:01.832574",
+      "success_rate": 0.0
+    },
+    "Heute": {
+      "word_data": {
+        "german": "Heute",
+        "english": "Today",
+        "pronunciation": "/ˈhɔɪtə/",
+        "example": "Heute ist ein schöner Tag.",
+        "example_translation": "Today is a beautiful day.",
+        "category": "time",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-03T20:33:01.832574",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-02T20:33:01.832574",
+      "success_rate": 0.0
     }
+  },
+  "longest_streak": 1,
+  "total_study_days": 1,
+  "streak_milestones": [],
+  "streak_freeze_used": 0,
+  "streak_freeze_available": 1,
+  "grace_period_active": false,
+  "grace_period_expires": null,
+  "learning_analytics": {
+    "session_times": [
+      {
+        "date": "2025-06-02T19:42:10.211705",
+        "words_count": 3,
+        "words": [
+          "Mutter",
+          "Wohnung",
+          "Fünf"
+        ],
+        "categories": [
+          "family",
+          "home",
+          "numbers"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-02T20:15:28.076807",
+        "words_count": 3,
+        "words": [
+          "Entschuldigung",
+          "Kaffee",
+          "Guten Morgen"
+        ],
+        "categories": [
+          "politeness",
+          "food_drink",
+          "greetings"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-02T20:15:51.700024",
+        "words_count": 3,
+        "words": [
+          "Flugzeug",
+          "Küche",
+          "Milch"
+        ],
+        "categories": [
+          "transport",
+          "home",
+          "food_drink"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-02T20:32:50.787876",
+        "words_count": 3,
+        "words": [
+          "Zimmer",
+          "Es tut mir leid",
+          "Schwarz"
+        ],
+        "categories": [
+          "home",
+          "politeness",
+          "colors"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-02T20:32:51.218018",
+        "words_count": 3,
+        "words": [
+          "Vater",
+          "Guten Tag",
+          "Neun"
+        ],
+        "categories": [
+          "family",
+          "greetings",
+          "numbers"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-02T20:33:01.827885",
+        "words_count": 3,
+        "words": [
+          "Acht",
+          "Eins",
+          "Heute"
+        ],
+        "categories": [
+          "numbers",
+          "numbers",
+          "time"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
+      }
+    ],
+    "daily_word_counts": {
+      "2025-06-02": 18
+    },
+    "category_performance": {
+      "family": {
+        "words_learned": 2,
+        "total_sessions": 2,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "home": {
+        "words_learned": 3,
+        "total_sessions": 3,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "numbers": {
+        "words_learned": 4,
+        "total_sessions": 4,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "politeness": {
+        "words_learned": 2,
+        "total_sessions": 2,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "food_drink": {
+        "words_learned": 2,
+        "total_sessions": 2,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "greetings": {
+        "words_learned": 2,
+        "total_sessions": 2,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "transport": {
+        "words_learned": 1,
+        "total_sessions": 1,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "colors": {
+        "words_learned": 1,
+        "total_sessions": 1,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "time": {
+        "words_learned": 1,
+        "total_sessions": 1,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      }
+    },
+    "difficulty_progression": [],
+    "retention_rates": {},
+    "learning_velocity": 0.6,
+    "engagement_score": 8.0
   }
 }
