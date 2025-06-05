@@ -2,7 +2,7 @@
   "chat_id": "1224491488",
   "current_level": "A1",
   "start_date": "2025-05-25T23:55:57.986421",
-  "total_words_learned": 26,
+  "total_words_learned": 29,
   "words_by_level": {
     "A1": {
       "learned": [
@@ -31,7 +31,10 @@
         "Neun",
         "Acht",
         "Eins",
-        "Heute"
+        "Heute",
+        "Schwester",
+        "Auf Wiedersehen",
+        "Drei"
       ],
       "review_due": []
     },
@@ -48,8 +51,8 @@
       "review_due": []
     }
   },
-  "daily_streak": 1,
-  "last_lesson_date": "2025-06-02",
+  "daily_streak": 2,
+  "last_lesson_date": "2025-06-05",
   "quiz_scores": [],
   "weekly_goals": {
     "words_per_week": 21,
@@ -639,13 +642,79 @@
       ],
       "last_reviewed": "2025-06-02T20:33:01.832574",
       "success_rate": 0.0
+    },
+    "Schwester": {
+      "word_data": {
+        "german": "Schwester",
+        "english": "Sister",
+        "pronunciation": "/ˈʃvɛstɐ/",
+        "example": "Meine Schwester studiert Medizin.",
+        "example_translation": "My sister studies medicine.",
+        "category": "family",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-06T20:58:49.148115",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-05T20:58:49.148115",
+      "success_rate": 0.0
+    },
+    "Auf Wiedersehen": {
+      "word_data": {
+        "german": "Auf Wiedersehen",
+        "english": "Goodbye",
+        "pronunciation": "/aʊf ˈviːdɐˌzeːən/",
+        "example": "Auf Wiedersehen, bis morgen!",
+        "example_translation": "Goodbye, see you tomorrow!",
+        "category": "greetings",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-06T20:58:49.148115",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-05T20:58:49.148115",
+      "success_rate": 0.0
+    },
+    "Drei": {
+      "word_data": {
+        "german": "Drei",
+        "english": "Three",
+        "pronunciation": "/draɪ/",
+        "example": "Das Buch hat drei Kapitel.",
+        "example_translation": "The book has three chapters.",
+        "category": "numbers",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-06T20:58:49.148115",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-05T20:58:49.148115",
+      "success_rate": 0.0
     }
   },
-  "longest_streak": 1,
-  "total_study_days": 1,
+  "longest_streak": 2,
+  "total_study_days": 2,
   "streak_milestones": [],
-  "streak_freeze_used": 0,
-  "streak_freeze_available": 1,
+  "streak_freeze_used": 1,
+  "streak_freeze_available": 0,
   "grace_period_active": false,
   "grace_period_expires": null,
   "learning_analytics": {
@@ -769,15 +838,36 @@
           "A1"
         ],
         "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-05T20:58:49.145853",
+        "words_count": 3,
+        "words": [
+          "Schwester",
+          "Auf Wiedersehen",
+          "Drei"
+        ],
+        "categories": [
+          "family",
+          "greetings",
+          "numbers"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
       }
     ],
     "daily_word_counts": {
-      "2025-06-02": 18
+      "2025-06-02": 18,
+      "2025-06-05": 3
     },
     "category_performance": {
       "family": {
-        "words_learned": 2,
-        "total_sessions": 2,
+        "words_learned": 3,
+        "total_sessions": 3,
         "average_retention": 0.0,
         "difficulty_score": 0.0
       },
@@ -788,8 +878,8 @@
         "difficulty_score": 0.0
       },
       "numbers": {
-        "words_learned": 4,
-        "total_sessions": 4,
+        "words_learned": 5,
+        "total_sessions": 5,
         "average_retention": 0.0,
         "difficulty_score": 0.0
       },
@@ -806,8 +896,8 @@
         "difficulty_score": 0.0
       },
       "greetings": {
-        "words_learned": 2,
-        "total_sessions": 2,
+        "words_learned": 3,
+        "total_sessions": 3,
         "average_retention": 0.0,
         "difficulty_score": 0.0
       },
@@ -832,7 +922,7 @@
     },
     "difficulty_progression": [],
     "retention_rates": {},
-    "learning_velocity": 0.6,
-    "engagement_score": 8.0
+    "learning_velocity": 0.7,
+    "engagement_score": 11.0
   }
 }
