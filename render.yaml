@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: german-daily-word-bot-webhook
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python webhook_server.py
+    envVars:
+      - key: BOT_TOKEN
+        fromSecret: BOT_TOKEN
+      - key: PORT
+        value: "5000"
+
+  - type: cron
+    name: german-daily-word-bot-daily
+    schedule: "0 9 * * *"  # Every day at 9am UTC
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python send_daily_words.py
+
+    envVars:
+      - key: BOT_TOKEN
+        fromSecret: BOT_TOKEN
+      - key: CHAT_ID
+        fromSecret: CHAT_ID
+      - key: WORDS_PER_DAY
+        value: "3"
