@@ -19,7 +19,8 @@ services:
     plan: free
     branch: main
     buildCommand: pip install -r requirements.txt
-    startCommand: python multi_user_bot.py
+    startCommand: python send_daily_words.py
+
     envVars:
       - key: BOT_TOKEN
         fromSecret: BOT_TOKEN
