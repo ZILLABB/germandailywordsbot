@@ -19,12 +19,33 @@ services:
     plan: free
     branch: main
     buildCommand: pip install -r requirements.txt
-    startCommand: python send_daily_words.py
-
+    startCommand: python multi_user_bot.py
     envVars:
       - key: BOT_TOKEN
         fromSecret: BOT_TOKEN
-      - key: CHAT_ID
-        fromSecret: CHAT_ID
       - key: WORDS_PER_DAY
         value: "3"
+
+  - type: cron
+    name: german-daily-word-bot-quiz
+    schedule: "0 19 * * 2,4,6"  # Tuesday, Thursday, Saturday at 7pm UTC
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python multi_user_quiz.py
+    envVars:
+      - key: BOT_TOKEN
+        fromSecret: BOT_TOKEN
+
+  - type: cron
+    name: german-daily-word-bot-weekly
+    schedule: "0 20 * * 0"  # Sunday at 8pm UTC
+    env: python
+    plan: free
+    branch: main
+    buildCommand: pip install -r requirements.txt
+    startCommand: python multi_user_reports.py
+    envVars:
+      - key: BOT_TOKEN
+        fromSecret: BOT_TOKEN
