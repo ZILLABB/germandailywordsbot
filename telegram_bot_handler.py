@@ -395,12 +395,12 @@ def main():
     """Main function for testing bot handler"""
     try:
         handler = TelegramBotHandler()
-        print("✅ Telegram Bot Handler initialized successfully")
-        print("🤖 Ready to process user commands")
+        print("Telegram Bot Handler initialized successfully")
+        print("Ready to process user commands")
         return True
-        
+
     except Exception as e:
-        print(f"❌ Error initializing bot handler: {e}")
+        print(f"Error initializing bot handler: {e}")
         return False
 
 if __name__ == "__main__":

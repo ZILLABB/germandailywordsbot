@@ -91,14 +91,14 @@ class TelegramBotRunner:
     
     def start_polling(self):
         """Start polling for updates"""
-        print("🤖 STARTING TELEGRAM BOT POLLING")
+        print("STARTING TELEGRAM BOT POLLING")
         print("=" * 50)
-        print(f"✅ Bot Token: {self.bot_token[:10]}...")
-        print(f"🔄 Polling for updates...")
-        print(f"📱 Bot is now LIVE and ready to respond!")
-        print(f"🎯 Try sending /start to your bot now!")
+        print(f"Bot Token: {self.bot_token[:10]}...")
+        print("Polling for updates...")
+        print("Bot is now LIVE and ready to respond!")
+        print("Try sending /start to your bot now!")
         print("=" * 50)
-        print("📋 Bot Commands Available:")
+        print("Bot Commands Available:")
         print("   /start - Begin German learning journey")
         print("   /lesson - Get daily German words")
         print("   /quiz - Take adaptive quiz")
@@ -108,7 +108,7 @@ class TelegramBotRunner:
         print("   /help - Show all commands")
         print("   /stop - Pause lessons")
         print("=" * 50)
-        print("🔴 Press Ctrl+C to stop the bot")
+        print("Press Ctrl+C to stop the bot")
         print("=" * 50)
         
         self.running = True
@@ -126,7 +126,7 @@ class TelegramBotRunner:
                 time.sleep(0.1)
                 
         except KeyboardInterrupt:
-            print("\n🛑 Bot stopped by user")
+            print("\nBot stopped by user")
             self.running = False
         except Exception as e:
             logger.error(f"Fatal error in polling: {e}")
@@ -142,22 +142,22 @@ class TelegramBotRunner:
         try:
             url = f"{self.api_url}/getMe"
             response = requests.get(url, timeout=10)
-            
+
             if response.status_code == 200:
                 data = response.json()
                 if data['ok']:
                     bot_info = data['result']
-                    print(f"✅ Bot connected successfully!")
+                    print("Bot connected successfully!")
                     print(f"   Bot Name: {bot_info.get('first_name')}")
                     print(f"   Username: @{bot_info.get('username')}")
                     print(f"   Bot ID: {bot_info.get('id')}")
                     return True
-            
-            print(f"❌ Bot connection failed: {response.text}")
+
+            print(f"Bot connection failed: {response.text}")
             return False
-            
+
         except Exception as e:
-            print(f"❌ Error testing bot connection: {e}")
+            print(f"Error testing bot connection: {e}")
             return False
     
     def send_startup_message(self):
@@ -168,20 +168,20 @@ class TelegramBotRunner:
                 return
             
             startup_message = """
-🤖 **German Daily Word Bot is NOW LIVE!** 🇩🇪
+**German Daily Word Bot is NOW LIVE!**
 
-✅ Bot is actively listening for commands
-🔄 Real-time message processing enabled
-📱 All commands are now functional
+Bot is actively listening for commands
+Real-time message processing enabled
+All commands are now functional
 
-🎯 **Test Commands:**
+**Test Commands:**
 /start - Begin learning journey
 /lesson - Get daily German words
 /quiz - Take adaptive quiz
 /stats - View your progress
 /help - See all commands
 
-🚀 **Your bot is ready for users!**
+**Your bot is ready for users!**
 Share: https://t.me/Germandailywordbot
 """
             
@@ -206,7 +206,7 @@ def main():
     """Main function to run the bot"""
     try:
         if not BOT_HANDLER_AVAILABLE:
-            print("❌ Bot handler not available")
+            print("Bot handler not available")
             return False
         
         # Initialize bot runner
@@ -214,7 +214,7 @@ def main():
         
         # Test connection
         if not bot_runner.test_bot_connection():
-            print("❌ Cannot connect to bot. Check your BOT_TOKEN.")
+            print("Cannot connect to bot. Check your BOT_TOKEN.")
             return False
         
         # Send startup notification
@@ -227,7 +227,7 @@ def main():
         
     except Exception as e:
         logger.error(f"Fatal error running bot: {e}")
-        print(f"❌ Fatal error: {e}")
+        print(f"Fatal error: {e}")
         return False
 
 if __name__ == "__main__":

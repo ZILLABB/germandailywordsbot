@@ -2,7 +2,7 @@
   "chat_id": "1224491488",
   "current_level": "A1",
   "start_date": "2025-05-25T23:55:57.986421",
-  "total_words_learned": 29,
+  "total_words_learned": 35,
   "words_by_level": {
     "A1": {
       "learned": [
@@ -34,7 +34,13 @@
         "Heute",
         "Schwester",
         "Auf Wiedersehen",
-        "Drei"
+        "Drei",
+        "Nein",
+        "Rot",
+        "Fleisch",
+        "Morgen",
+        "Zwei",
+        "Jahr"
       ],
       "review_due": []
     },
@@ -51,8 +57,8 @@
       "review_due": []
     }
   },
-  "daily_streak": 2,
-  "last_lesson_date": "2025-06-05",
+  "daily_streak": 1,
+  "last_lesson_date": "2025-06-12",
   "quiz_scores": [],
   "weekly_goals": {
     "words_per_week": 21,
@@ -708,10 +714,142 @@
       ],
       "last_reviewed": "2025-06-05T20:58:49.148115",
       "success_rate": 0.0
+    },
+    "Nein": {
+      "word_data": {
+        "german": "Nein",
+        "english": "No",
+        "pronunciation": "/naɪn/",
+        "example": "Nein, das möchte ich nicht.",
+        "example_translation": "No, I don't want that.",
+        "category": "basic",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-13T09:32:11.872599",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-12T09:32:11.872599",
+      "success_rate": 0.0
+    },
+    "Rot": {
+      "word_data": {
+        "german": "Rot",
+        "english": "Red",
+        "pronunciation": "/roːt/",
+        "example": "Die Rose ist rot.",
+        "example_translation": "The rose is red.",
+        "category": "colors",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-13T09:32:11.872599",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-12T09:32:11.872599",
+      "success_rate": 0.0
+    },
+    "Fleisch": {
+      "word_data": {
+        "german": "Fleisch",
+        "english": "Meat",
+        "pronunciation": "/flaɪʃ/",
+        "example": "Ich esse kein Fleisch.",
+        "example_translation": "I don't eat meat.",
+        "category": "food_drink",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-13T09:32:11.872599",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-12T09:32:11.872599",
+      "success_rate": 0.0
+    },
+    "Morgen": {
+      "word_data": {
+        "german": "Morgen",
+        "english": "Tomorrow",
+        "pronunciation": "/ˈmɔʁɡən/",
+        "example": "Morgen gehen wir ins Museum.",
+        "example_translation": "Tomorrow we're going to the museum.",
+        "category": "time",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-13T09:32:53.899522",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-12T09:32:53.899522",
+      "success_rate": 0.0
+    },
+    "Zwei": {
+      "word_data": {
+        "german": "Zwei",
+        "english": "Two",
+        "pronunciation": "/tsvaɪ/",
+        "example": "Ich habe zwei Katzen.",
+        "example_translation": "I have two cats.",
+        "category": "numbers",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-13T09:32:53.899522",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-12T09:32:53.899522",
+      "success_rate": 0.0
+    },
+    "Jahr": {
+      "word_data": {
+        "german": "Jahr",
+        "english": "Year",
+        "pronunciation": "/jaːɐ̯/",
+        "example": "Dieses Jahr lerne ich Deutsch.",
+        "example_translation": "This year I'm learning German.",
+        "category": "time",
+        "level": "A1"
+      },
+      "review_count": 0,
+      "next_review": "2025-06-13T09:32:53.899522",
+      "intervals": [
+        1,
+        3,
+        7,
+        14,
+        30
+      ],
+      "last_reviewed": "2025-06-12T09:32:53.899522",
+      "success_rate": 0.0
     }
   },
   "longest_streak": 2,
-  "total_study_days": 2,
+  "total_study_days": 3,
   "streak_milestones": [],
   "streak_freeze_used": 1,
   "streak_freeze_available": 0,
@@ -858,11 +996,52 @@
           "A1"
         ],
         "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-12T09:32:11.868582",
+        "words_count": 3,
+        "words": [
+          "Nein",
+          "Rot",
+          "Fleisch"
+        ],
+        "categories": [
+          "basic",
+          "colors",
+          "food_drink"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
+      },
+      {
+        "date": "2025-06-12T09:32:53.890839",
+        "words_count": 3,
+        "words": [
+          "Morgen",
+          "Zwei",
+          "Jahr"
+        ],
+        "categories": [
+          "time",
+          "numbers",
+          "time"
+        ],
+        "levels": [
+          "A1",
+          "A1",
+          "A1"
+        ],
+        "duration_minutes": 5
       }
     ],
     "daily_word_counts": {
       "2025-06-02": 18,
-      "2025-06-05": 3
+      "2025-06-05": 3,
+      "2025-06-12": 6
     },
     "category_performance": {
       "family": {
@@ -878,8 +1057,8 @@
         "difficulty_score": 0.0
       },
       "numbers": {
-        "words_learned": 5,
-        "total_sessions": 5,
+        "words_learned": 6,
+        "total_sessions": 6,
         "average_retention": 0.0,
         "difficulty_score": 0.0
       },
@@ -890,8 +1069,8 @@
         "difficulty_score": 0.0
       },
       "food_drink": {
-        "words_learned": 2,
-        "total_sessions": 2,
+        "words_learned": 3,
+        "total_sessions": 3,
         "average_retention": 0.0,
         "difficulty_score": 0.0
       },
@@ -908,12 +1087,18 @@
         "difficulty_score": 0.0
       },
       "colors": {
-        "words_learned": 1,
-        "total_sessions": 1,
+        "words_learned": 2,
+        "total_sessions": 2,
         "average_retention": 0.0,
         "difficulty_score": 0.0
       },
       "time": {
+        "words_learned": 3,
+        "total_sessions": 3,
+        "average_retention": 0.0,
+        "difficulty_score": 0.0
+      },
+      "basic": {
         "words_learned": 1,
         "total_sessions": 1,
         "average_retention": 0.0,
@@ -922,7 +1107,7 @@
     },
     "difficulty_progression": [],
     "retention_rates": {},
-    "learning_velocity": 0.7,
+    "learning_velocity": 0.9,
     "engagement_score": 11.0
   }
 }
