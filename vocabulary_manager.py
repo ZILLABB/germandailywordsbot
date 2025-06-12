@@ -249,3 +249,7 @@ class VocabularyManager:
                     validation_results['missing_fields'].append(f"Word {i+1}: missing {field}")
         
         return validation_results
+
+    def get_available_levels(self) -> List[str]:
+        """Get list of available CEFR levels"""
+        return list(self.words_by_level.keys())
